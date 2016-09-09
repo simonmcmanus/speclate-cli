@@ -1,13 +1,8 @@
-#!/usr/bin/env node
-
 var generateMarkup = require('./lib/generate-markup')
 var generateApi = require('./lib/generate-api')
 var moveFiles = require('./lib/move-files')
 var schema = require('./lib/schema')
 var async = require('async')
-/**
- * Module dependencies.
- */
 
 var program = require('commander');
 
