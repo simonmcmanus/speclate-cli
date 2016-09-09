@@ -17,7 +17,6 @@ module.exports = function(spec) {
     .option('-M, --markup [type]', 'Add the specified type of cheese [marble]', 'marble')
     .parse(process.argv);
 
-
     var methods = {
         validate: (next) => {
             console.log('Validating..');
