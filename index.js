@@ -4,6 +4,7 @@ var generateMarkup = require('./lib/generate-markup')
 var generateApi = require('./lib/generate-api')
 var moveFiles = require('./lib/move-files')
 var schema = require('./lib/schema')
+var async = require('async')
 /**
  * Module dependencies.
  */
@@ -21,36 +22,49 @@ module.exports = function(spec) {
     .option('-M, --markup [type]', 'Add the specified type of cheese [marble]', 'marble')
     .parse(process.argv);
 
-    if(program.all ) {
-        console.log('Validating..');
-        schema.validate(spec);
-        console.log('Generating markup..');
-        generateMarkup(spec);
-        console.log('Generating markup..');
-        generateApi(spec);
-        console.log('Moving files..')
-        moveFiles(spec);
-        return;
+
+    var methods = {
+        validate: (next) => {
+            console.log('Validating..');
+            schema.validate(spec);
+            next();
+        },
+        markup: (next) => {
+            console.log('Generating markup..');
+            generateMarkup(spec, next);
+        },
+        api: (next) => {
+            console.log('Generating API..');
+            generateApi(spec, next);
+
+        },
+        files: (next) => {
+            console.log('Moving files..')
+            moveFiles(spec, next);
+        }
     }
 
-    if (program.validate) {
-        console.log('Validating..');
-        schema.validate(spec);
-    }
+    if(program.all) {
+        async.series(methods);
+    } else {
+        var run = [];
 
-    if (program.markup) {
-        console.log('Generating markup..');
-        generateMarkup(spec);
-    }
+        if (program.validate) {
+            schema.validate(spec);
+        }
 
-    if (program.api) {
-        console.log('Generating markup..');
-        generateApi(spec);
-    }
+        if (program.markup) {
+            run.push(methods.markup);
+        }
 
-    if (program.files) {
-        console.log('Moving files..')
-        moveFiles(spec);
-    }
+        if (program.api) {
+            run.push(methods.api);
+        }
 
+        if (program.files) {
+            run.push(methods.files);
+        }
+
+        async.series(run);
+    }
 }
