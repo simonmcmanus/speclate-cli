@@ -14,25 +14,30 @@ module.exports = function(spec) {
     .option('-S, --specs', 'generate spec api files')
     .option('-F, --files', 'Move files')
     .option('-V, --validate', 'validate schema')
-    .option('-M, --markup [type]', 'Add the specified type of cheese [marble]', 'marble')
+    .option('-M, --markup', 'generate markup')
     .parse(process.argv);
 
     var methods = {
         validate: (next) => {
-            console.log('Validating..');
+            console.log('')
+            console.log('Validating spec..');
             schema.validate(spec);
+            console.log('  ok')
             next();
         },
         markup: (next) => {
+            console.log('')
             console.log('Generating markup..');
             generateMarkup(spec, next);
         },
         api: (next) => {
+            console.log('')
             console.log('Generating API..');
             generateApi(spec, next);
 
         },
         files: (next) => {
+            console.log('')
             console.log('Moving files..')
             moveFiles(spec, next);
         }
