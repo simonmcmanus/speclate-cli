@@ -1,5 +1,11 @@
 
 
+# 1.1.2
+
+add joi to deps [view commit](http://github.com/$3/$packageName/commit/0227d38f92d1bebe7f16ba54d0e88e7e53477377) 
+
+ 
+
 # 1.1.1
 
 rename api method to specs [view commit](http://github.com/$3/$packageName/commit/0264c2330dac278e0b817f6b62c500156802253b) 
