@@ -8,7 +8,7 @@ var packagePath = path.join(__dirname, '/package.json')
 var pkg = require(packagePath)
 var program = require('commander')
 
-module.exports = function (spec, speclateVersion) {
+module.exports = function (spec, speclate, speclateVersion) {
   console.log('Speclate v' + speclateVersion, 'cli v' + pkg.version)
 
   program
@@ -31,12 +31,12 @@ module.exports = function (spec, speclateVersion) {
     markup: (next) => {
       console.log('')
       console.log('Generating markup..')
-      generateMarkup(spec, next)
+      generateMarkup(spec, speclate, next)
     },
     api: (next) => {
       console.log('')
       console.log('Generating API..')
-      generateApi(spec, next)
+      generateApi(spec, speclate, next)
     },
     files: (next) => {
       console.log('')
