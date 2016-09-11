@@ -3,10 +3,12 @@ var generateApi = require('./lib/generate-api')
 var moveFiles = require('./lib/move-files')
 var schema = require('./lib/schema')
 var async = require('async')
-
+var package = require(__dirname + '/package.json');
 var program = require('commander');
 
-module.exports = function(spec) {
+module.exports = function(spec, speclateVersion) {
+
+    console.log('Speclate v' + speclateVersion, 'cli v' + package.version)
 
     program
     .version('0.0.1')
