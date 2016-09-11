@@ -1,5 +1,13 @@
 
 
+# 1.1.3
+
+generateApi handles / in route (creates index.json) [view commit](http://github.com/$3/$packageName/commit/7658e7909d3ce243fb28005f9845b393c599309d) 
+
+adding debug flag [view commit](http://github.com/$3/$packageName/commit/1893a580b9e7e8be8794f037ca4b8e492260ccba) 
+
+ 
+
 # 1.1.2
 
 add joi to deps [view commit](http://github.com/$3/$packageName/commit/0227d38f92d1bebe7f16ba54d0e88e7e53477377) 
