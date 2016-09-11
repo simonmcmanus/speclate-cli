@@ -1,25 +1,25 @@
 {
-    "name": "speclate-cli",
-    "version": "1.1.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {},
-    "bin": {
-        "speclate-cli": "./index.js"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "async": "^2.0.1",
-        "commander": "^2.9.0",
-        "mkdirp": "^0.5.1"
-    },
-    "bundledDependencies": [
-        "async",
-        "commander",
-        "mkdirp"
-    ],
-    "devDependencies": {
-        "standard": "^8.0.0"
-    }
+  "name": "speclate-cli",
+  "version": "1.1.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "bin": {
+    "speclate-cli": "./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.0.1",
+    "commander": "^2.9.0",
+    "mkdirp": "^0.5.1"
+  },
+  "bundledDependencies": [
+    "async",
+    "commander",
+    "mkdirp"
+  ],
+  "devDependencies": {
+    "standard": "^8.0.0"
+  }
 }
