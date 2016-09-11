@@ -2,6 +2,7 @@ var generateMarkup = require('./lib/generate-markup')
 var generateApi = require('./lib/generate-api')
 var moveFiles = require('./lib/move-files')
 var schema = require('./lib/schema')
+var server = require('./lib/server')
 var async = require('async')
 var path = require('path')
 var packagePath = path.join(__dirname, '/package.json')
@@ -15,6 +16,7 @@ module.exports = function (spec, speclate, speclateVersion) {
     .version('0.0.1')
     .option('-A, --all', 'run all commands')
     .option('-S, --specs', 'generate spec api files')
+    .option('-D, --debug', 'run a development server')
     .option('-F, --files', 'Move files')
     .option('-V, --validate', 'validate schema')
     .option('-M, --markup', 'generate markup')
@@ -50,8 +52,10 @@ module.exports = function (spec, speclate, speclateVersion) {
   } else {
     var run = []
 
-    if (program.validate) {
-      schema.validate(spec)
+    schema.validate(spec)
+
+    if (program.debug) {
+      server(spec)
     }
 
     if (program.markup) {
