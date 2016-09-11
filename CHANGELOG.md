@@ -1,5 +1,27 @@
 
 
+# 1.1.0
+
+takes speclate as a param [view commit](http://github.com/$3/$packageName/commit/e91cfe03551698ef639a0e8c9edef804f111456e) 
+
+linting fixes [view commit](http://github.com/$3/$packageName/commit/c119f7501049310cee5d74fb8ef10f3d10087c2e) 
+
+show versions in log [view commit](http://github.com/$3/$packageName/commit/a1ab3c65324fe5290a0f78ae518de58b4c8a3932) 
+
+adding scanSpecForFiles to schema [view commit](http://github.com/$3/$packageName/commit/e042352e3e21c4ad3977523a0c1001f0e2c7d3ce) 
+
+call scanSpecForFiles when moving files into outputDir [view commit](http://github.com/$3/$packageName/commit/090f659e7a262349cc30eab9ca9816b81b4febdd) 
+
+improve log output [view commit](http://github.com/$3/$packageName/commit/3a2c01d43ff48d338253993a6109d10c649ae8a3) 
+
+white space cleanup [view commit](http://github.com/$3/$packageName/commit/b44426f68dc65d3e8f9facc9ced2c363f99bd2e2) 
+
+adding readme details [view commit](http://github.com/$3/$packageName/commit/de77b7ea81ba629bbe53d4ae55a7cda4f88e9a45) 
+
+removing node env and commend from index [view commit](http://github.com/$3/$packageName/commit/424b1d06e47229d2df290ead716cf51fab63d95f) 
+
+ 
+
 # 1.0.0
 
 remove empty test command [view commit](http://github.com/$3/$packageName/commit/25898ca8bea2243da814ca0ae00ed6ee81a55f9f) 
