@@ -1,5 +1,13 @@
 
 
+# 1.1.1
+
+rename api method to specs [view commit](http://github.com/$3/$packageName/commit/0264c2330dac278e0b817f6b62c500156802253b) 
+
+default files option to empty object [view commit](http://github.com/$3/$packageName/commit/fd24c66e4ac55516a2cbbcc6932172e04fb4a5cb) 
+
+ 
+
 # 1.1.0
 
 takes speclate as a param [view commit](http://github.com/$3/$packageName/commit/e91cfe03551698ef639a0e8c9edef804f111456e) 
