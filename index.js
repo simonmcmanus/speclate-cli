@@ -33,7 +33,7 @@ module.exports = function (spec, speclate, speclateVersion) {
       console.log('Generating markup..')
       generateMarkup(spec, speclate, next)
     },
-    api: (next) => {
+    specs: (next) => {
       console.log('')
       console.log('Generating API..')
       generateApi(spec, speclate, next)
