@@ -1,5 +1,13 @@
 
 
+# 1.2.0
+
+white space [view commit](http://github.com/$3/$packageName/commit/6111b140054794d6a5f14c36bb8fc92044c0d092) 
+
+add serve-me to package [view commit](http://github.com/$3/$packageName/commit/bcfc0e89fa88b92892626b50aaa853a6905cfa00) 
+
+ 
+
 # 1.1.4
 
 adding serve me to the package.json [view commit](http://github.com/$3/$packageName/commit/3afb459150d09e3837a57630adf6c542ba30ee99) 
