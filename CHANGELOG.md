@@ -1,5 +1,11 @@
 
 
+# 1.1.4
+
+adding serve me to the package.json [view commit](http://github.com/$3/$packageName/commit/3afb459150d09e3837a57630adf6c542ba30ee99) 
+
+ 
+
 # 1.1.3
 
 generateApi handles / in route (creates index.json) [view commit](http://github.com/$3/$packageName/commit/7658e7909d3ce243fb28005f9845b393c599309d) 
