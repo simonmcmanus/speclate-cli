@@ -1,5 +1,6 @@
 var generateMarkup = require('./lib/generate-markup')
 var generateApi = require('./lib/generate-api')
+var appCache = require('./lib/app-cache')
 var moveFiles = require('./lib/move-files')
 var schema = require('./lib/schema')
 var server = require('./lib/server')
@@ -15,10 +16,11 @@ module.exports = function (spec, speclate, speclateVersion) {
   program
     .version('0.0.1')
     .option('-A, --all', 'run all commands')
-    .option('-S, --specs', 'generate spec api files')
+    .option('-S, --specs', 'generate api files')
     .option('-D, --debug', 'run a development server')
     .option('-F, --files', 'Move files')
     .option('-V, --validate', 'validate schema')
+    .option('-C, --appcache', 'Generate app cache manifest file')
     .option('-M, --markup', 'generate markup')
     .parse(process.argv)
 
@@ -40,6 +42,11 @@ module.exports = function (spec, speclate, speclateVersion) {
       console.log('Generating API..')
       generateApi(spec, speclate, next)
     },
+    appcache: (next) => {
+      console.log('')
+      console.log('Generating Manifest file..')
+      appCache(spec, next)
+    },
     files: (next) => {
       console.log('')
       console.log('Moving files..')
@@ -53,6 +60,11 @@ module.exports = function (spec, speclate, speclateVersion) {
     var run = []
 
     schema.validate(spec)
+
+
+    if (program.appCache) {
+
+    }
 
     if (program.debug) {
       server(spec)
