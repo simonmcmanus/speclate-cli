@@ -1,5 +1,17 @@
 
 
+# 1.3.0
+
+add appCacheFiles to schema [view commit](http://github.com/$3/$packageName/commit/80b354875d431b8669f0c7782b16a2af6b2e5b0b) 
+
+dont throw error if file not found in move [view commit](http://github.com/$3/$packageName/commit/970e9358d2c70b346b792bd07a849ad8217c3dd8) 
+
+app cache handles appCacheFiles array [view commit](http://github.com/$3/$packageName/commit/36fe7f889fed423d357cac125cf79cf12c585ca7) 
+
+adding appCache to cli [view commit](http://github.com/$3/$packageName/commit/eab9173a2f90abe14c07f9faa48d95b8a5c47531) 
+
+ 
+
 # 1.2.0
 
 white space [view commit](http://github.com/$3/$packageName/commit/6111b140054794d6a5f14c36bb8fc92044c0d092) 
