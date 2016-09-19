@@ -17,7 +17,7 @@ module.exports = function (spec, speclate, speclateVersion) {
     .version('0.0.1')
     .option('-A, --all', 'run all commands')
     .option('-S, --specs', 'generate api files')
-    .option('-D, --debug', 'run a development server')
+    .option('-D, --debug [port]', 'run a development server')
     .option('-F, --files', 'Move files')
     .option('-V, --validate', 'validate schema')
     .option('-C, --appcache', 'Generate app cache manifest file')
@@ -61,13 +61,8 @@ module.exports = function (spec, speclate, speclateVersion) {
 
     schema.validate(spec)
 
-
-    if (program.appCache) {
-
-    }
-
     if (program.debug) {
-      server(spec)
+      server(spec, program.debug)
     }
 
     if (program.markup) {
