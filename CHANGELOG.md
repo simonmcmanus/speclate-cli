@@ -1,5 +1,15 @@
 
 
+# 1.4.0
+
+include app cache files [view commit](http://github.com/$3/$packageName/commit/1ffcf2e543f30a2c291a5354bfba848873fa419e) 
+
+log files written to manifest [view commit](http://github.com/$3/$packageName/commit/1bbb35b08f4f4bf298fe8c33a3531eb31328077b) 
+
+debug command now takes port param [view commit](http://github.com/$3/$packageName/commit/557555e4384f364487453fdb48eff1153fbd7f97) 
+
+ 
+
 # 1.3.0
 
 add appCacheFiles to schema [view commit](http://github.com/$3/$packageName/commit/80b354875d431b8669f0c7782b16a2af6b2e5b0b) 
