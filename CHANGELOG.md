@@ -1,5 +1,11 @@
 
 
+# 1.4.3
+
+show full path [view commit](http://github.com/$3/$packageName/commit/e0e910418a7ae365c207386e54cc5794a8ff3ee6) 
+
+ 
+
 # 1.4.2
 
 server lists directory [view commit](http://github.com/$3/$packageName/commit/a84340dd8bd92844251543b015a48e8d1ca5abf6) 
