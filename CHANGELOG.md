@@ -1,5 +1,11 @@
 
 
+# 1.4.2
+
+server lists directory [view commit](http://github.com/$3/$packageName/commit/a84340dd8bd92844251543b015a48e8d1ca5abf6) 
+
+ 
+
 # 1.4.1
 
 adding container to the schema [view commit](http://github.com/$3/$packageName/commit/ee6cc5a31da3e063647d1712fe9cd49a82fd3741) 
