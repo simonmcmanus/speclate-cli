@@ -1,5 +1,11 @@
 
 
+# 1.5.0
+
+adding layout to option schema [view commit](http://github.com/$3/$packageName/commit/3b6cec695e811571339686c84f9bb496b7b9e08e) 
+
+ 
+
 # 1.4.3
 
 show full path [view commit](http://github.com/$3/$packageName/commit/e0e910418a7ae365c207386e54cc5794a8ff3ee6) 
