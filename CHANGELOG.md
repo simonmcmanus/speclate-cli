@@ -1,5 +1,13 @@
 
 
+# 2.0.0
+
+speclate no longer passed in as a param [view commit](http://github.com/$3/$packageName/commit/2f134900b829dddcb4c1463ea4287cec5092379b) 
+
+move schema into its own package [view commit](http://github.com/$3/$packageName/commit/6f8f62772d608d6d43099717810be0308783a914) 
+
+ 
+
 # 1.5.0
 
 adding layout to option schema [view commit](http://github.com/$3/$packageName/commit/3b6cec695e811571339686c84f9bb496b7b9e08e) 
