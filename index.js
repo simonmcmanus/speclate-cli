@@ -13,7 +13,7 @@ var packagePath = path.join(__dirname, '/package.json')
 var pkg = require(packagePath)
 var program = require('commander')
 
-module.exports = function (spec, speclateVersion) {
+module.exports = function (spec, speclateVersion, callback) {
   console.log('Speclate v' + speclateVersion, 'cli v' + pkg.version)
 
   program
@@ -59,7 +59,7 @@ module.exports = function (spec, speclateVersion) {
   }
 
   if (program.all) {
-    async.series(methods)
+    async.series(methods, callback)
   } else {
     var run = []
 
@@ -85,6 +85,7 @@ module.exports = function (spec, speclateVersion) {
       run.push(methods.files)
     }
 
-    async.series(run)
+    async.series(run, callback)
   }
 }
+
