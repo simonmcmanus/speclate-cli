@@ -1,5 +1,11 @@
 
 
+# 2.1.2
+
+pull in just the node mon file [view commit](http://github.com/$3/$packageName/commit/afbf1a4fef33384451c113eec0e99914b5c0b206) 
+
+ 
+
 # 2.1.1
 
 make nodemon full dep [view commit](http://github.com/$3/$packageName/commit/188388847507575a622c427223d7e73c4356e7a7) 
