@@ -1,5 +1,11 @@
 
 
+# 2.1.1
+
+make nodemon full dep [view commit](http://github.com/$3/$packageName/commit/188388847507575a622c427223d7e73c4356e7a7) 
+
+ 
+
 # 2.1.0
 
 put back the v [view commit](http://github.com/$3/$packageName/commit/0fce4035b6c54b8ca0c7347e03e93143533b9d7b) 
