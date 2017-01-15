@@ -1,34 +1,34 @@
 {
-    "name": "speclate-cli",
-    "version": "2.1.2",
-    "description": "",
-    "main": "index.js",
-    "scripts": {},
-    "bin": {
-        "speclate-cli": "./index.js"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "async": "^2.0.1",
-        "commander": "^2.9.0",
-        "joi": "^9.0.4",
-        "mkdirp": "^0.5.1",
-        "serve-me": "^0.8.3",
-        "speclate-schema": "^1.0.0",
-        "nodemon": "^1.11.0"
-    },
-    "bundledDependencies": [
-        "async",
-        "commander",
-        "joi",
-        "mkdirp",
-        "serve-me",
-        "speclate-schema",
-        "nodemon"
-    ],
-    "devDependencies": {
-        "serve-me": "^0.8.3",
-        "standard": "^8.0.0"
-    }
+  "name": "speclate-cli",
+  "version": "2.1.3",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "bin": {
+    "speclate-cli": "./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.0.1",
+    "commander": "^2.9.0",
+    "joi": "^9.0.4",
+    "mkdirp": "^0.5.1",
+    "serve-me": "^0.8.3",
+    "speclate-schema": "^1.0.0",
+    "nodemon": "^1.11.0"
+  },
+  "bundledDependencies": [
+    "async",
+    "commander",
+    "joi",
+    "mkdirp",
+    "serve-me",
+    "speclate-schema",
+    "nodemon"
+  ],
+  "devDependencies": {
+    "serve-me": "^0.8.3",
+    "standard": "^8.0.0"
+  }
 }
