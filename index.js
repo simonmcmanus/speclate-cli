@@ -41,11 +41,6 @@ module.exports = function (spec, speclateVersion) {
       console.log('Generating markup..')
       generateMarkup(spec, next)
     },
-    watch: (next) => {
-      console.log('')
-      console.log('Watch ..')
-      watch(spec, next)
-    },
     specs: (next) => {
       console.log('')
       console.log('Generating API..')
