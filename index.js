@@ -1,7 +1,10 @@
+// this file needs a good old clean up. sorry. :/
+
 var generateMarkup = require('./lib/generate-markup')
 var generateApi = require('./lib/generate-api')
 var appCache = require('./lib/app-cache')
 var moveFiles = require('./lib/move-files')
+var watch = require('./lib/watch')
 var schema = require('speclate-schema')
 var server = require('./lib/server')
 var async = require('async')
@@ -14,10 +17,11 @@ module.exports = function (spec, speclateVersion) {
   console.log('Speclate v' + speclateVersion, 'cli v' + pkg.version)
 
   program
-    .version('0.0.1')
+    .version(pkg.version)
     .option('-A, --all', 'run all commands')
     .option('-S, --specs', 'generate api files')
     .option('-D, --debug [port]', 'run a development server')
+    .option('-W, --watch', 'watch for changes')
     .option('-F, --files', 'Move files')
     .option('-V, --validate', 'validate schema')
     .option('-C, --appcache', 'Generate app cache manifest file')
@@ -36,6 +40,11 @@ module.exports = function (spec, speclateVersion) {
       console.log('')
       console.log('Generating markup..')
       generateMarkup(spec, next)
+    },
+    watch: (next) => {
+      console.log('')
+      console.log('Watch ..')
+      watch(spec, next)
     },
     specs: (next) => {
       console.log('')
@@ -63,6 +72,10 @@ module.exports = function (spec, speclateVersion) {
 
     if (program.debug) {
       server(spec, program.debug)
+    }
+
+    if (program.watch) {
+      watch(spec, program.debug)
     }
 
     if (program.markup) {
