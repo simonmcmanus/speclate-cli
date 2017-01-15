@@ -1,5 +1,19 @@
 
 
+# 2.1.0
+
+put back the v [view commit](http://github.com/$3/$packageName/commit/0fce4035b6c54b8ca0c7347e03e93143533b9d7b) 
+
+move-file replaces pwd [view commit](http://github.com/$3/$packageName/commit/54cfcdc62f9c5200baf5cb4ed8f48cac385d1398) 
+
+handle different cases [view commit](http://github.com/$3/$packageName/commit/2b1f23de993518aa8fa329dfa77dade31782c30f) 
+
+watch is not part of all [view commit](http://github.com/$3/$packageName/commit/17840c0b2df675355a863e59ff42a76329814689) 
+
+adding watch command [view commit](http://github.com/$3/$packageName/commit/6e00ec264b4f9dd3773ae723e9a4769f30ee7a40) 
+
+ 
+
 # 2.0.0
 
 speclate no longer passed in as a param [view commit](http://github.com/$3/$packageName/commit/2f134900b829dddcb4c1463ea4287cec5092379b) 
