@@ -1,5 +1,11 @@
 
 
+# 2.1.3
+
+use nodemon require correctly [view commit](http://github.com/$3/$packageName/commit/5d992592907f32278bf4e4611ce4e39351cb5d26) 
+
+ 
+
 # 2.1.2
 
 pull in just the node mon file [view commit](http://github.com/$3/$packageName/commit/afbf1a4fef33384451c113eec0e99914b5c0b206) 
