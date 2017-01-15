@@ -1,6 +1,6 @@
 {
     "name": "speclate-cli",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "description": "",
     "main": "index.js",
     "scripts": {},
@@ -24,7 +24,8 @@
         "joi",
         "mkdirp",
         "serve-me",
-        "speclate-schema"
+        "speclate-schema",
+        "nodemon"
     ],
     "devDependencies": {
         "serve-me": "^0.8.3",
