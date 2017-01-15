@@ -1,5 +1,11 @@
 
 
+# 2.1.4
+
+nodemon as dev deps [view commit](http://github.com/$3/$packageName/commit/160e735d18d02ffd3ee8b7ada1368d417678fe33) 
+
+ 
+
 # 2.1.3
 
 use nodemon require correctly [view commit](http://github.com/$3/$packageName/commit/5d992592907f32278bf4e4611ce4e39351cb5d26) 
