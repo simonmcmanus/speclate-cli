@@ -27,22 +27,13 @@ speclate --help
 
 # Commands:
 
-# --validate
 
-Validate a schema against the speclate schema
+# --build
 
-https://github.com/simonmcmanus/speclate-schema
-
-
-# --all
-Generate all the files needed to host a site.
+Generate all the files needed for a site.
 
 
-# --specs
-
-Generate spec files.
-
-# --debug
+# --dev
 
 ```bash
 speclate --debug 8080
@@ -51,23 +42,7 @@ speclate --debug 8080
 Runs a development server, you need to specify the port you want the server to run on.
 
 
-
-# --files
-
-Move the files listed in the spec.js file into the outputDir.
-
 # --watch
 
 Watches the files listed in the spec and moves them into the docs directory when they change.
 
-
-
-
-# --appcache
-
-
-Generate the appcache manifest files
-
-# --markup
-
-Generate just the HTML pages defined in the spec.

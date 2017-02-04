@@ -1,13 +1,9 @@
 // this file needs a good old clean up. sorry. :/
 
-var generateMarkup = require('./lib/generate-markup')
-var generateApi = require('./lib/generate-api')
-var appCache = require('./lib/app-cache')
-var moveFiles = require('./lib/move-files')
 var watch = require('./lib/watch')
+var build = require('./lib/build')
 var schema = require('speclate-schema')
 var server = require('./lib/server')
-var async = require('async')
 var path = require('path')
 var packagePath = path.join(__dirname, '/package.json')
 var pkg = require(packagePath)
@@ -18,74 +14,23 @@ module.exports = function (spec, speclateVersion, callback) {
 
   program
     .version(pkg.version)
-    .option('-A, --all', 'run all commands')
-    .option('-S, --specs', 'generate api files')
-    .option('-D, --debug [port]', 'run a development server')
+    .option('-B, --build', 'Build speclate site for the current directory')
+    .option('-D, --dev [port]', 'Run a local development server')
     .option('-W, --watch', 'watch for changes')
-    .option('-F, --files', 'Move files')
-    .option('-V, --validate', 'validate schema')
-    .option('-C, --appcache', 'Generate app cache manifest file')
-    .option('-M, --markup', 'generate markup')
     .parse(process.argv)
 
-  var methods = {
-    validate: (next) => {
-      console.log('')
-      console.log('Validating spec..')
-      schema.validate(spec)
-      console.log('  ok')
-      next()
-    },
-    markup: (next) => {
-      console.log('')
-      console.log('Generating markup..')
-      generateMarkup(spec, next)
-    },
-    specs: (next) => {
-      console.log('')
-      console.log('Generating API..')
-      generateApi(spec, next)
-    },
-    appcache: (next) => {
-      console.log('')
-      console.log('Generating Manifest file..')
-      appCache(spec, next)
-    },
-    files: (next) => {
-      console.log('')
-      console.log('Moving files..')
-      moveFiles(spec, next)
-    }
+  schema.validate(spec)
+
+  if (program.build) {
+    build(spec, callback)
   }
 
-  if (program.all) {
-    async.series(methods, callback)
-  } else {
-    var run = []
+  if (program.dev) {
+    server(spec, program.debug)
+  }
 
-    schema.validate(spec)
-
-    if (program.debug) {
-      server(spec, program.debug)
-    }
-
-    if (program.watch) {
-      watch(spec, program.debug)
-    }
-
-    if (program.markup) {
-      run.push(methods.markup)
-    }
-
-    if (program.api) {
-      run.push(methods.api)
-    }
-
-    if (program.files) {
-      run.push(methods.files)
-    }
-
-    async.series(run, callback)
+  if (program.watch) {
+    watch(spec, program.debug)
   }
 }
 
