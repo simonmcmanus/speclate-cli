@@ -26,7 +26,7 @@ module.exports = function (spec, speclateVersion, callback) {
   }
 
   if (program.dev) {
-    server(spec, program.debug)
+    server(spec, program.dev)
   }
 
   if (program.watch) {
