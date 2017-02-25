@@ -1,5 +1,7 @@
 # speclate-cli
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/simonmcmanus/speclate-cli.svg)](https://greenkeeper.io/)
+
 This package contains the CLI parts of speclate. Its distributed as part of speclate and available using the speclate command:
 
 
