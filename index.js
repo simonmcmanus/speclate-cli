@@ -9,8 +9,8 @@ var packagePath = path.join(__dirname, '/package.json')
 var pkg = require(packagePath)
 var program = require('commander')
 
-module.exports = function (spec, speclateVersion, callback) {
-  console.log('Speclate v' + speclateVersion, 'cli v' + pkg.version)
+module.exports = function (spec, speclate, callback) {
+  console.log('Speclate v' + speclate.version, 'cli v' + pkg.version)
 
   program
     .version(pkg.version)
@@ -22,7 +22,7 @@ module.exports = function (spec, speclateVersion, callback) {
   schema.validate(spec)
 
   if (program.build) {
-    build(spec, callback)
+    build(spec, speclate, callback)
   }
 
   if (program.dev) {
