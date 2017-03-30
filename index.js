@@ -30,7 +30,7 @@ module.exports = function (spec, speclate, callback) {
   }
 
   if (program.watch) {
-    watch(spec, program.debug)
+    watch(spec, speclate, program.debug)
   }
 }
 
