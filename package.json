@@ -30,6 +30,6 @@
     "speclate-schema"
   ],
   "devDependencies": {
-    "standard": "^8.0.0"
+    "standard": "10.x.x"
   }
 }
