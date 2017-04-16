@@ -3,7 +3,9 @@
   "version": "6.1.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "NODE_ENV=test jasmine  "
+  },
   "bin": {
     "speclate-cli": "./index.js"
   },
@@ -30,6 +32,17 @@
     "speclate-schema"
   ],
   "devDependencies": {
+    "jasmine": "^2.5.3",
     "standard": "10.x.x"
+  },
+  "standard": {
+    "ignore": [],
+    "globals": [
+      "describe",
+      "before",
+      "beforeEach",
+      "expect",
+      "it"
+    ]
   }
 }
