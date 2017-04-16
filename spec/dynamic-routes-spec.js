@@ -15,6 +15,9 @@ describe('given a spec with dynamic routes ', function () {
           title: 'item 2'
         }
       ],
+      url: function(group) {
+        return '/links/' + group.replace(/ /g, '-') + '/index.html'
+      },
       group: function (pages, item) {
         var created = item['.created']
         if (!pages[created]) {
