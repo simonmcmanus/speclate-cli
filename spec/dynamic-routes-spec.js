@@ -1,4 +1,4 @@
-var dynamicRoutes = require('../lib/dynamic-routes')
+var dynamicRoutes = require('../lib/generators/dynamic-routes')
 
 describe('given a spec with dynamic routes ', function () {
 
