@@ -1,6 +1,6 @@
 {
   "name": "speclate-cli",
-  "version": "9.1.5",
+  "version": "10.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
