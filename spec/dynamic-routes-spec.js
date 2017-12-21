@@ -67,3 +67,46 @@ describe('given a spec with dynamic routes ', function () {
     })
   })
 })
+
+
+
+
+
+describe('given a spec with dynamic routes with urls specified in the data', function () {
+
+  var spec = {
+    '/:date/index.html': {
+      page: 'link',
+      data: [
+        {
+          id: 1,
+          url: '/hi.html',
+          title: 'hi there',
+          '.title': 'hi there',
+          '.summary': 'this is the full summary'
+        },
+        {
+          id: 2,
+          url: '/bye.html',
+          title: 'bye there',
+          '.title': 'bye there',
+          '.summary': 'this is the full summary of bye'
+        }
+      ]
+    }
+  }
+  describe('calling dynmaic-routes', function () {
+
+    var generatedRoutes = dynamicRoutes(spec);
+    //console.log(generatedRoutes)
+
+    it('should generate a route based on the url property', () => {
+      expect(generatedRoutes['/bye.html'].spec.title).toEqual('bye there')
+      expect(generatedRoutes['/hi.html'].spec.title).toEqual('hi there')
+    });
+
+    it('should remove the orignal dynamic route', () => {
+      expect(generatedRoutes['/:date/index.html']).toEqual(undefined)
+    })
+  })
+})
