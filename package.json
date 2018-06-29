@@ -16,7 +16,7 @@
     "chalk": "^2.3.0",
     "cheerio": "^1.0.0-rc.2",
     "chokidar": "^2.0.0",
-    "commander": "^2.9.0",
+    "commander": "^2.16.0",
     "joi": "^13.1.1",
     "lodash": "^4.17.4",
     "mkdirp": "^0.5.1",
