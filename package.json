@@ -14,7 +14,7 @@
   "dependencies": {
     "async": "^2.3.0",
     "chalk": "^2.3.0",
-    "cheerio": "^1.0.0-rc.2",
+    "cheerio": "^1.0.0-rc.3",
     "chokidar": "^2.0.0",
     "commander": "^2.9.0",
     "html-minifier": "^3.5.19",
