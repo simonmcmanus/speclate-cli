@@ -1,4 +1,3 @@
-// this file needs a good old clean up. sorry. :/
 
 var watch = require('./lib/watch')
 var build = require('./lib/build')
@@ -9,7 +8,7 @@ var packagePath = path.join(__dirname, '/package.json')
 var pkg = require(packagePath)
 var program = require('commander')
 
-module.exports = function (spec, speclate, callback) {
+module.exports = function (inputSpec, speclate, callback) {
   console.log('Speclate v' + speclate.version, 'cli v' + pkg.version)
 
   program
@@ -19,18 +18,17 @@ module.exports = function (spec, speclate, callback) {
     .option('-W, --watch', 'watch for changes')
     .parse(process.argv)
 
-  schema.validate(spec)
+  var { options, spec } = schema.validate(inputSpec)
 
   if (program.build) {
-    build(spec, speclate, callback)
+    build(spec, options, speclate, callback)
   }
 
   if (program.dev) {
-    server(spec, program.dev)
+    server(options, program.dev)
   }
 
   if (program.watch) {
-    watch(spec, speclate, program.debug)
+    watch(spec, options, speclate, program.debug)
   }
 }
-
