@@ -19,7 +19,7 @@
     "commander": "^2.9.0",
     "html-minifier": "^4.0.0",
     "i": "^0.3.6",
-    "joi": "^13.1.1",
+    "joi": "^14.0.0",
     "lodash": "^4.17.4",
     "mkdirp": "^0.5.1",
     "node-notifier": "^5.1.2",
