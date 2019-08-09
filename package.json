@@ -16,7 +16,7 @@
     "chalk": "^2.3.0",
     "cheerio": "^1.0.0-rc.2",
     "chokidar": "^3.0.0",
-    "commander": "^2.9.0",
+    "commander": "^3.0.0",
     "html-minifier": "^4.0.0",
     "i": "^0.3.6",
     "joi": "^14.0.0",
