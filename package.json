@@ -21,7 +21,7 @@
     "i": "^0.3.6",
     "joi": "^14.0.0",
     "lodash": "^4.17.4",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.4",
     "node-notifier": "^5.1.2",
     "node-sass": "4.x.x",
     "serve-me": "^0.8.3",
