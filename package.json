@@ -15,7 +15,7 @@
     "async": "^3.0.1",
     "chalk": "^2.3.0",
     "cheerio": "^1.0.0-rc.2",
-    "chokidar": "^3.0.0",
+    "chokidar": "^3.4.3",
     "commander": "^2.9.0",
     "html-minifier": "^4.0.0",
     "joi": "^14.0.0",
